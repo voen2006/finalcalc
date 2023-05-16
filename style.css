@@ -11,6 +11,7 @@ button{
     border-radius: 10px;
 }
 .calculator{
+    margin-top: 10px;
     background-color: #80564D;
     display: flex;
     box-sizing: border-box;
@@ -20,6 +21,7 @@ button{
     flex-direction: column;
     width: 500px;
     height: 600px;
+    border-radius: 10px;
 }
 .p-1{
     background-color: #DFE0DF;
@@ -27,5 +29,6 @@ button{
     height: 100px;
     font-weight: 900;
     font-size: 3rem;
+    border-radius: 10px;
     box-sizing: border-box;
 }
