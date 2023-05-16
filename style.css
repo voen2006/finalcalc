@@ -1,5 +1,5 @@
 body{
-    background-color: #DC711A;
+    background-image: radial-gradient(circle, #dc711a, #d06b19, #c46517, #b85f16, #ac5915);
 }
 button{
     background-color: #402E32;
