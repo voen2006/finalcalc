@@ -3,14 +3,25 @@ body{
 }
 button{
     background-color: #402E32;
-    color: #ffffff;
+    box-shadow: 0px 5px 0px #22191b;
+    color: #DFE0DF;
     box-sizing: border-box;
     width: 100px;
     height: 100px;
     margin: 5px 2px;
+    font-weight: 900;
+    font-size: 2rem;
     border-radius: 10px;
+    transition: 0.3s;
+    border: 3px solid #150f11;
+}
+button:active{
+    box-shadow: 0px 1px 0px #22191b;
+    transform: translateY(4px);
 }
 .calculator{
+    border: 3px solid  #48312c;
+    box-shadow: 0px 20px 0px #48312c;
     margin-top: 10px;
     background-color: #80564D;
     display: flex;
