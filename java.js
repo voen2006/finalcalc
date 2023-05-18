@@ -59,10 +59,16 @@ is.onclick = () => {
         num2 = '';
     }
     else if (value == '/') {
+        if (num2 == '0') {
+             p1.innerHTML = Error;
+            num2 = '';
+        }
+        else if {
         num3 = num1 / num2;
         p1.innerHTML = num3;
         num1 = num3;
         num2 = '';
+        }
     }
 }
 
