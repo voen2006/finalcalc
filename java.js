@@ -59,8 +59,8 @@ is.onclick = () => {
         num2 = '';
     }
     else if (value == '/') {
-        if (num2 == '0') {
-             p1.innerHTML = Error;
+        if (num2 = '0') {
+             p1.innerHTML = 'Error';
             num2 = '';
         }
         else {
