@@ -63,7 +63,7 @@ is.onclick = () => {
              p1.innerHTML = Error;
             num2 = '';
         }
-        else if {
+        else {
         num3 = num1 / num2;
         p1.innerHTML = num3;
         num1 = num3;
