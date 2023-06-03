@@ -9,10 +9,8 @@ const seven = document.querySelector('.seven');
 const nine = document.querySelector('.nine');
 const minus = document.querySelector('.minus');
 const plus = document.querySelector('.plus');
-const stepen = document.querySelector('.stepen');
 const zero = document.querySelector('.zero');
 const is = document.querySelector('.is');
-const koren = document.querySelector('.sqrt');
 let p1 = document.querySelector('.p-1');
 const mno = document.querySelector('.mno');
 const dilen = document.querySelector('.dilit');
@@ -24,10 +22,16 @@ let value = '';
 let num3 = '';
 let krn = '';
 
-window.onload = ()=> {
+// -------------calculator-------------------
+
+window.onload = () => {
     p1.innerHTML = 0;
 }
 is.onclick = () => {
+    plus.style.color = '#DEDEDE';
+    minus.style.color = '#DEDEDE';
+    mno.style.color = '#DEDEDE';
+    dilen.style.color = '#DEDEDE';
     if (value == '+') {
         num3 = +num1 + +num2;
         p1.innerHTML = num3;
@@ -40,18 +44,6 @@ is.onclick = () => {
         num1 = num3;
         num2 = '';
     }
-    else if (value == '^') {
-        num3 = Math.pow(num1, num2);
-        p1.innerHTML = num3;
-        num1 = num3;
-        num2 = '';
-    }
-    else if (krn == 'koren') {
-        num3 = Math.sqrt(num1);
-        p1.innerHTML = num3;
-        num1 = num3;
-        num2 = '';
-    }
     else if (value == '++') {
         num3 = num1 * num2;
         p1.innerHTML = num3;
@@ -60,43 +52,58 @@ is.onclick = () => {
     }
     else if (value == '/') {
         if (num2 = '0') {
-             p1.innerHTML = 'Error';
+            p1.innerHTML = 'Error';
             num2 = '';
         }
         else {
-        num3 = num1 / num2;
-        p1.innerHTML = num3;
-        num1 = num3;
-        num2 = '';
+            num3 = num1 / num2;
+            p1.innerHTML = num3;
+            num1 = num3;
+            num2 = '';
         }
     }
 }
 
-C.onclick = ()=> {
-    num1 = num2 = num3 = value ='';
+C.onclick = () => {
+    num1 = num2 = num3 = value = '';
     p1.innerHTML = 0;
+    plus.style.color = '#DEDEDE';
+    minus.style.color = '#DEDEDE';
+    mno.style.color = '#DEDEDE';
+    dilen.style.color = '#DEDEDE';
 }
 dilen.onclick = () => {
-value='/';
+    value = '/';
+    plus.style.color = '#DEDEDE';
+    minus.style.color = '#DEDEDE';
+    mno.style.color = '#DEDEDE';
+    dilen.style.color = '#7C9399 ';
 }
-mno.onclick= ()=> {
-    value='++';
+mno.onclick = () => {
+    value = '++';
+    plus.style.color = '#DEDEDE';
+    minus.style.color = '#DEDEDE';
+    mno.style.color = '#7C9399';
+    dilen.style.color = '#DEDEDE';
 }
-// koren.onclick= ()=> {
-//     krn = 'koren';
-// }
-// stepen.onclick = () => {
-//     value = '^';
-// }
 plus.onclick = () => {
     value = '+';
+    plus.style.color = '#7C9399';
+    minus.style.color = '#DEDEDE';
+    mno.style.color = '#DEDEDE';
+    dilen.style.color = '#DEDEDE';
 }
 minus.onclick = () => {
     value = '-';
+    plus.style.color = '#DEDEDE';
+    minus.style.color = '#7C9399';
+    mno.style.color = '#DEDEDE';
+    dilen.style.color = '#DEDEDE';
 }
 
 
 one.onclick = function () {
+    console.log('alalaka');
     if (value == '') {
         num1 = p1.innerHTML = num1 + '1';
     }
@@ -176,4 +183,6 @@ zero.onclick = function () {
         num2 = p1.innerHTML = num2 + '0';
     }
 }
+
+
 
